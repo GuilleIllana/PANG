@@ -18,12 +18,15 @@ void Mundo::Inicializa() {
 	esfera1.SetColor(255, 255, 255);
 	esfera1.SetPos(2.0f, 4.0f, 0.0f);
 	esfera1.SetRadio(2.0f);
+	esfera2.SetColor(0, 255, 255);
+	esfera2.SetPos(6.0f, 2.0f, 0.0f);
+	esfera2.SetRadio(2.0f);
 	bonus.SetPos(5.0f, 0.0f, 0.0f);
 	disparo.SetPos(5.0f, 0.0f, 0.0f);
 	disparo.SetColor(0, 0, 255);
 	plataforma.SetPos(-5.0f, 7.0f, 0.0f, 5.0f, 7.0f, 0.0f);
 	plataforma.SetColor(255, 255, 255);
-	bonus.SetSize(5.0f);
+	bonus.SetSize(2.0f);
 	
 }
 
@@ -57,19 +60,16 @@ float Mundo::get_z_ojo() {
 	return this->z_ojo;
 }
 int Mundo::Distanciaes() {
-	/*int i = 0, j = 1;
-	float delta_x = esfera1.getx() - esfera2.getx();
-	float delta_y = esfera1.gety() - esfera2.gety();
-	float delta_z = esfera1.getz() - esfera2.getz();
-	float norma = delta_x * delta_x + delta_y * delta_y + delta_z * delta_z;
+	int i = 0, j = 1;
+	Vector2D delta_p = esfera1.getPos() - esfera2.getPos();
+	float norma = delta_p * delta_p;
 	float dist = sqrt(norma);
 	dist -= (esfera1.getRadio() + esfera2.getRadio());
 	if (dist < 0) {
 		return i;
 	}
 	else return j;
-	return dist;*/
-	return 0;
+	
 }
 
 

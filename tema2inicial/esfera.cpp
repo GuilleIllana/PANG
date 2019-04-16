@@ -24,8 +24,9 @@ void Esfera::SetPos(float x, float y, float z) {
 float Esfera::getRadio() {
 	return this->radio;
 }
+
 Vector2D Esfera::getPos() {
-	return p;
+	return this->p;
 }
 
 void Esfera::SetRadio(float r) {
@@ -40,6 +41,7 @@ void Esfera::Dibuja() {
 }
 
 void Esfera::Mueve(float t) {
+
 	p = p + v * t + a * (0.5f * t * t);
 	v = v + a * t;
 }
