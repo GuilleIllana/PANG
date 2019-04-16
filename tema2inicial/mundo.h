@@ -28,9 +28,9 @@ public:
 	float get_z_ojo();
 	void Inicializa();
 	void tecla(unsigned char key);
-	void refresh();
 	int Distanciaes();
 	void Mueve(float t);
+	void Dibuja();
 
 };
 

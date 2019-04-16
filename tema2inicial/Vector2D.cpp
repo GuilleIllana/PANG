@@ -47,8 +47,9 @@ Vector2D Vector2D::operator + (Vector2D &v) {
 
 //Producto escalar
 float Vector2D::operator * (Vector2D &v) {
-	
-    return x * v.x + y * v.y;
+	float res;
+	res = x * v.x + y * v.y;
+	return res;
 
 }
 

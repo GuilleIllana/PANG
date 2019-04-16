@@ -26,16 +26,15 @@ void Mundo::Inicializa() {
 	bonus.SetSize(5.0f);
 	
 }
-void Mundo::refresh() {
-	Mueve(0.025f);
-	esfera1.Dibujaes();
+
+void Mundo::Dibuja() {
+	esfera1.Dibuja();
 	caja.Dibuja();
 	hombre.Dibuja();
 	disparo.Dibuja();
 	plataforma.Dibuja();
 	bonus.Dibuja();
-}
-
+ }
 
 void Mundo::Mueve(float t) {
 	hombre.Mueve(t);

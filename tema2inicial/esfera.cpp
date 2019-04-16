@@ -32,7 +32,7 @@ void Esfera::SetRadio(float r) {
 	this->radio = r;
 }
 
-void Esfera::Dibujaes() {
+void Esfera::Dibuja() {
 	glColor3ub(this->red, this->green, this->blue);
 	glTranslatef(this->p.x, this->p.y, this->p.z);
 	glutSolidSphere(this->radio, 20, 20);

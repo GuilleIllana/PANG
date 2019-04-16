@@ -57,8 +57,7 @@ void OnDraw(void)
 		0.0, 1.0, 0.0);      // definimos hacia arriba (eje Y)    
 
 	//aqui es donde hay que poner el código de dibujo
-
-	mundo.refresh();
+	mundo.Dibuja();
 
 	//no borrar esta linea ni poner nada despues
 	glutSwapBuffers();
@@ -73,6 +72,7 @@ void OnKeyboardDown(unsigned char key, int x_t, int y_t)
 void OnTimer(int value)
 {
 	//esfera1.Mueve(1, 0, 0);
+	mundo.Mueve(0.025f);
 	glutTimerFunc(25, OnTimer, 0);
 	glutPostRedisplay();
 }

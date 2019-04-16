@@ -18,11 +18,7 @@ public:
 	void SetPos(float posx, float posy, float posz);
 	void SetRadio(float r);
 	Vector2D getPos();
-	float getx();
-	float gety();
-	float getz();
-	void Muevees(int ix, int iy, int iz);
-	void Dibujaes();
+	void Dibuja();
 	float getRadio();
 	void Mueve(float t);
 
