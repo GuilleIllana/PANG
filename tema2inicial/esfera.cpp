@@ -7,6 +7,7 @@ Esfera::Esfera()
 	red = green = blue = 255; //blanco
 	radio = 1.0f;
 	a.y = -0.98f;
+	a.x = 0.0f;
 }
 
 void Esfera::SetColor(unsigned char r, unsigned char g, unsigned char b) {
@@ -41,7 +42,6 @@ void Esfera::Dibuja() {
 }
 
 void Esfera::Mueve(float t) {
-
-	p = p + v * t + a * (0.5f * t * t);
-	v = v + a * t;
+	this->p = p + v * t + a * (0.5f * t * t);
+	this->v = v + a * t;
 }

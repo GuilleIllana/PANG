@@ -13,6 +13,7 @@ void Bonus::Dibuja()
 	rand() / (float)RAND_MAX);   
 	glutSolidCube(lado);
 	glRotatef(-30, -1, -1, -1);
+	glTranslatef(-this->p.x, -this->p.y, -this->p.z);
 	glPopMatrix();
 }
 
@@ -49,5 +50,5 @@ void Bonus::SetSize(float size) {
 	this->lado = size;
 }
 Bonus::Bonus() {
-	a.y = -0.98f;
+	a.y = -0.00098f;
 }

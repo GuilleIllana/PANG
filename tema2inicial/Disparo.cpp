@@ -7,6 +7,7 @@
 Disparo::Disparo() {
 	Cal = 0.25f;
 	a.y = 0.98f;
+	a.x = 0.0f;
 }
 void Disparo::Dibuja()
 {
@@ -14,15 +15,18 @@ void Disparo::Dibuja()
 	glPushMatrix();
 	glTranslatef(p.x, p.y, 0);
 	glutSolidSphere(Cal, 20, 20);
+	glTranslatef(-this->p.x, -this->p.y, -this->p.z);
 	glPopMatrix();
+	
     
 	//Estela
 	glColor3f(200, 0, 133);
 	glBegin(GL_LINES);
 	glVertex2d(p.x, p.y);
 	glVertex2d(origen.x, origen.y);
+	glTranslatef(-this->p.x, -this->p.y, -this->p.z);
 	glEnd();
-	
+
 }
 
 Disparo::~Disparo()

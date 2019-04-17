@@ -14,7 +14,7 @@ void Mundo::set_pov(float x, float y, float z) {
 
 //Mundo mundo;
 void Mundo::Inicializa() {
-	set_pov(0, 7.5, 30);
+	set_pov(0.0, 7.5, 30.0);
 	esfera1.SetColor(255, 255, 255);
 	esfera1.SetPos(2.0f, 4.0f, 0.0f);
 	esfera1.SetRadio(2.0f);
@@ -32,6 +32,7 @@ void Mundo::Inicializa() {
 
 void Mundo::Dibuja() {
 	esfera1.Dibuja();
+	esfera2.Dibuja();
 	caja.Dibuja();
 	hombre.Dibuja();
 	disparo.Dibuja();
@@ -60,7 +61,7 @@ float Mundo::get_z_ojo() {
 	return this->z_ojo;
 }
 int Mundo::Distanciaes() {
-	int i = 0, j = 1;
+	/*int i = 0, j = 1;
 	Vector2D delta_p = esfera1.getPos() - esfera2.getPos();
 	float norma = delta_p * delta_p;
 	float dist = sqrt(norma);
@@ -69,7 +70,8 @@ int Mundo::Distanciaes() {
 		return i;
 	}
 	else return j;
-	
+	*/
+	return 0;
 }
 
 

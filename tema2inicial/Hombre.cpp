@@ -4,6 +4,7 @@
 
 Hombre::Hombre() {
 	altura = 1.8f;
+	a = 0;
 }
 
 
@@ -16,7 +17,9 @@ void Hombre::Dibuja() {
 	glTranslatef(p.x, p.y, p.z);
 	glColor3f(1.0f, 0.0f, 0.0f);
 	glutSolidSphere(altura, 20, 20);
+	glTranslatef(-this->p.x, -this->p.y, -this->p.z);
 	glPopMatrix();
+	
 
 }
 void Hombre::Mueve(float t) {

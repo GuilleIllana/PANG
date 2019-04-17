@@ -35,8 +35,6 @@ int main(int argc, char* argv[])
 	glutDisplayFunc(OnDraw);
 	glutTimerFunc(25, OnTimer, 0);//le decimos que dentro de 25ms llame 1 vez a la funcion OnTimer()
 	glutKeyboardFunc(OnKeyboardDown);
-
-
 	mundo.Inicializa();
 	//pasarle el control a GLUT,que llamara a los callbacks
 	glutMainLoop();
@@ -71,8 +69,7 @@ void OnKeyboardDown(unsigned char key, int x_t, int y_t)
 
 void OnTimer(int value)
 {
-	//esfera1.Mueve(1, 0, 0);
-	//mundo.Mueve(0.025f);  esto sigue sin funcionar
+	mundo.Mueve(0.025f);  //esto sigue sin funcionar
 	glutTimerFunc(25, OnTimer, 0);
 	glutPostRedisplay();
 }

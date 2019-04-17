@@ -1,4 +1,4 @@
 ﻿cl : Línea de comandos warning D9035: La opción 'Gm' está desusada y se quitará en próximas versiones
-  mundo.cpp
+  Pared.cpp
 Bonus.obj : warning LNK4075: se omite '/EDITANDCONTINUE' debido a la especificación '/INCREMENTAL:NO'
   Pang.vcxproj -> C:\Users\guill\Downloads\rcedazo-iic-23b80281ebed\PANG\tema2inicial\.\Debug\Pang.exe
